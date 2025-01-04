@@ -7,7 +7,7 @@ A multiplayer mod for (il)legitimate copies of BONELAB that are incapable of usi
 For installation, source code setup, documentation, help with Marrow SDK integration, and more, check out [the wiki](https://github.com/Lakatrazz/BONELAB-Fusion/wiki). (This is the official Fusion wiki, not Unfusion's; this is simply a fork.)
 
 ## Networking
-This mod is networked and built around Steam, and is stuck with steam networking (lmao)
+This mod is networked and built around Steam, with the default networking layer being Proxy SteamVR instead of default SteamVR to account for modification of the Steam API library within BONELAB for "certain" copies of the game.
 
 ## Modules
 Fusion supports a system called "Modules". This allows other code mods to add on and sync their own events in Fusion.
