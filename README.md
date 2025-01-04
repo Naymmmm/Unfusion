@@ -4,7 +4,7 @@ A multiplayer mod for suspicious copies of BONELAB featuring support for PCVR. Q
 ![](https://github.com/Naymmmm/Unfusion/blob/main/ufv2.png?raw=true)
 
 ## Documentation
-For installation, source code setup, documentation, help with Marrow SDK integration, and more, check out [the wiki](https://github.com/Lakatrazz/BONELAB-Fusion/wiki). (This is the official Fusion wiki, not Unfusion's; this is simply a fork.
+For installation, source code setup, documentation, help with Marrow SDK integration, and more, check out [the wiki](https://github.com/Lakatrazz/BONELAB-Fusion/wiki). (This is the official Fusion wiki, not Unfusion's; this is simply a fork.)
 
 ## Networking
 This mod is networked and built around Steam, and is stuck with steam networking (lmao)
@@ -25,4 +25,4 @@ Fusion also has an SDK for integrating features into Marrow™ SDK items, maps, 
 
 ## Disclaimer
 
-#### THIS PROJECT IS NOT AFFILIATED WITH ANY OTHER MULTIPLAYER MODS OR STRESS LEVEL ZERO! This is its own standalone mod and shares no code with others, any similarities are coincidental!
+#### THIS PROJECT IS (a fork of fusion, that is) NOT AFFILIATED WITH ANY OTHER MULTIPLAYER MODS (fusion lol) OR STRESS LEVEL ZERO! This is its own standalone mod and shares code only with the original Fusion repository, any similarities are coincidental! This is a fork by the way; feel free to steal code since this is OPEN FUCKING SOURCE!
