@@ -1,5 +1,5 @@
-# BONELAB Fusion Release
-A multiplayer mod for BONELAB featuring support for all platforms.
+# Unfusion
+A multiplayer mod for suspicious copies of BONELAB featuring support for PCVR. Quest functionality remains but untouched.
 
 ![](https://i.imgur.com/1ZpMfei.png)
 
