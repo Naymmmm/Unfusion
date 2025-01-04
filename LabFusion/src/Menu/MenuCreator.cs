@@ -66,7 +66,7 @@ public static class MenuCreator
 
         // Modify the button
         var buttonText = fusionButton.transform.Find("text_Control").GetComponent<TMP_Text>();
-        buttonText.text = "Fusion";
+        buttonText.text = "Unfusion";
 
         buttonText.gameObject.name = "text_Fusion";
 

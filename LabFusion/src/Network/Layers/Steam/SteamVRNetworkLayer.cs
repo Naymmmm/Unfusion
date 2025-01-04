@@ -6,5 +6,5 @@ public class SteamVRNetworkLayer : SteamNetworkLayer
 
     public override uint ApplicationID => SteamVRId;
 
-    public override string Title => "SteamVR";
+    public override string Title => "SteamVR (Unsupported on Online-Fix)";
 }

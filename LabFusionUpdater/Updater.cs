@@ -21,7 +21,7 @@ public static class Updater
         Error = 2
     }
 
-    public const string ReleasesApi = "https://api.github.com/repos/Lakatrazz/BONELAB-Fusion/releases";
+    public const string ReleasesApi = "https://api.github.com/repos/Naymmmm/Unfusion/releases";
 
     public const string ModName = "LabFusion";
     public const string AssemblyExtension = ".dll";
