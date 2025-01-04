@@ -1,13 +1,13 @@
 # Unfusion
 A multiplayer mod for suspicious copies of BONELAB featuring support for PCVR. Quest functionality remains but untouched.
 
-![](https://i.imgur.com/1ZpMfei.png)
+![](https://github.com/Naymmmm/Unfusion/blob/main/ufv2.png?raw=true)
 
 ## Documentation
-For installation, source code setup, documentation, help with Marrow SDK integration, and more, check out [the wiki](https://github.com/Lakatrazz/BONELAB-Fusion/wiki).
+For installation, source code setup, documentation, help with Marrow SDK integration, and more, check out [the wiki](https://github.com/Lakatrazz/BONELAB-Fusion/wiki). (This is the official Fusion wiki, not Unfusion's; this is simply a fork.
 
 ## Networking
-This mod is networked and built around Steam, but the networking system can be swapped out using a Networking Layer.
+This mod is networked and built around Steam, and is stuck with steam networking (lmao)
 
 ## Modules
 Fusion supports a system called "Modules". This allows other code mods to add on and sync their own events in Fusion.
@@ -16,6 +16,7 @@ Fusion also has an SDK for integrating features into Marrow™ SDK items, maps, 
 ## Credits
 - BoneLib AutoUpdater: https://github.com/yowchap/BoneLib
 - Testing/Development Credits In Game
+- Lakatrazz: Fusion (the official one)
 
 ## Licensing
 - The source code of [Facepunch.Steamworks](https://github.com/Facepunch/Facepunch.Steamworks) is used partially under the MIT License. The full license can be found [here](https://github.com/Facepunch/Facepunch.Steamworks/blob/master/LICENSE).
