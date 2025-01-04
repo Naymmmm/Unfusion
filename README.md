@@ -1,5 +1,5 @@
 # Unfusion
-A multiplayer mod for suspicious copies of BONELAB featuring support for PCVR. Quest functionality remains but untouched.
+A multiplayer mod for (il)legitimate copies of BONELAB that are incapable of using the Steam API or have a modified version of it. Features support for PCVR. Quest functionality remains but untouched.
 
 ![](https://github.com/Naymmmm/Unfusion/blob/main/ufv2.png?raw=true)
 
