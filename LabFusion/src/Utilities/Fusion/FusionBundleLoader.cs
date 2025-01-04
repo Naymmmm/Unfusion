@@ -70,10 +70,35 @@ public static class FusionBundleLoader
         FusionAchievementLoader.OnBundleLoad();
     }
 
+    /*
     public static void OnBundleUnloaded()
     {
         FusionContentLoader.OnBundleUnloaded();
         FusionPointItemLoader.OnBundleUnloaded();
         FusionAchievementLoader.OnBundleUnloaded();
+    } */
+
+    public static void OnBundleUnloaded()
+    {
+        try
+        {
+            FusionLogger.Log("Calling FusionContentLoader.OnBundleUnloaded");
+            FusionContentLoader.OnBundleUnloaded();
+            FusionLogger.Log("Finished FusionContentLoader.OnBundleUnloaded");
+
+            FusionLogger.Log("Calling FusionPointItemLoader.OnBundleUnloaded");
+            FusionPointItemLoader.OnBundleUnloaded();
+            FusionLogger.Log("Finished FusionPointItemLoader.OnBundleUnloaded");
+
+            FusionLogger.Log("Calling FusionAchievementLoader.OnBundleUnloaded");
+            FusionAchievementLoader.OnBundleUnloaded();
+            FusionLogger.Log("Finished FusionAchievementLoader.OnBundleUnloaded");
+        }
+        catch (Exception ex)
+        {
+            Task faultedTask = Task.FromException(ex);
+            FusionLogger.LogException("unloading bundles in OnBundleUnloaded", ex);
+        }
     }
+
 }

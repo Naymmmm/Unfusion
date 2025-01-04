@@ -56,7 +56,9 @@ public abstract class ProxyNetworkLayer : NetworkLayer
 
     public override bool CheckSupported()
     {
-        return PlatformHelper.IsAndroid;
+        // You are always supported buddy... HAWK TUAH!
+        FusionLogger.Log("You are totally on Android, or are you..?");
+        return true;
     }
 
     public override bool CheckValidation()

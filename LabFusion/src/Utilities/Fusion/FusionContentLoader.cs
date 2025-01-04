@@ -92,11 +92,41 @@ namespace LabFusion.Utilities
         public static void OnBundleUnloaded()
         {
             // Unload content bundle
+            //if (ContentBundle.HasAsset)
+            //{
+            //FusionLogger.Log("Unloading assets!");
+            // ContentBundle.Asset.Unload(true);
+            //ContentBundle.UnloadAsset();
+            //} else
+            //{
+            //FusionLogger.Log("Ouch, bundle aint got nun assets.");
+            //}
             if (ContentBundle.HasAsset)
             {
-                ContentBundle.Asset.Unload(true);
-                ContentBundle.UnloadAsset();
+                if (ContentBundle.Asset != null)
+                {
+                    FusionLogger.Log("Unloading ContentBundle assets!");
+                    try
+                    {
+                        ContentBundle.Asset.Unload(true);
+                    }
+                    catch (Exception ex)
+                    {
+                        FusionLogger.Warn($"Error unloading asset: {ex.Message}\n{ex.StackTrace}");
+                    }
+
+                    ContentBundle.UnloadAsset();
+                }
+                else
+                {
+                    FusionLogger.Warn("ContentBundle asset is null, even though HasAsset is true.");
+                }
             }
+            else
+            {
+                FusionLogger.Warn("Ouch, bundle ain't got any assets.");
+            }
+
         }
     }
 }

@@ -16,7 +16,10 @@ public static class NetworkLayerDeterminer
             return NetworkLayer.GetLayer<ProxySteamVRNetworkLayer>();
         }
 
-        return NetworkLayer.GetLayer<SteamVRNetworkLayer>();
+        // Substitute SteamVRNetworkLayer for ProxySteamVRNetworkLayer so we can hopefully 127.0.0.1 that shit
+        //return NetworkLayer.GetLayer<SteamVRNetworkLayer>();
+        FusionLogger.Log("Substituting NetworkLayer...");
+        return NetworkLayer.GetLayer<ProxySteamVRNetworkLayer>();
     }
 
     public static NetworkLayer VerifyLayer(NetworkLayer layer)

@@ -47,7 +47,7 @@ public static class MenuLogIn
         };
 
         var logInElement = layoutOptions.Find("button_LogIn").GetComponent<FunctionElement>()
-            .WithTitle("Log In")
+            .WithTitle("Log In (illegally)")
             .Do(() =>
             {
                 var layer = NetworkLayerManager.GetTargetLayer();

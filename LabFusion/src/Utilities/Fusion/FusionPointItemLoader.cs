@@ -60,11 +60,31 @@ public static class FusionPointItemLoader
 
     public static void OnBundleUnloaded()
     {
-        // Unload item bundle
         if (ItemBundle.HasAsset)
         {
-            ItemBundle.Asset.Unload(true);
-            ItemBundle.UnloadAsset();
+            if (ItemBundle.Asset != null)
+            {
+                try
+                {
+                    // Unload the asset and then clean up
+                    FusionLogger.Log("Unloading ItemBundle asset.");
+                    ItemBundle.Asset.Unload(true);
+                    ItemBundle.UnloadAsset();
+                    FusionLogger.Log("Successfully unloaded ItemBundle asset.");
+                }
+                catch (Exception ex)
+                {
+                    FusionLogger.LogException("unloading ItemBundle asset", ex);
+                }
+            }
+            else
+            {
+                FusionLogger.Warn("ItemBundle asset is null, even though HasAsset is true.");
+            }
+        }
+        else
+        {
+            FusionLogger.Warn("ItemBundle has no asset to unload.");
         }
     }
 

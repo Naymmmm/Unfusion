@@ -83,11 +83,40 @@ namespace LabFusion.Utilities
 
         public static void OnBundleUnloaded()
         {
-            // Unload item bundle
+            // DEPRECATED for newer function
+            /*
             if (AchievementBundle.HasAsset)
             {
                 AchievementBundle.Asset.Unload(true);
                 AchievementBundle.UnloadAsset();
+            }
+            */
+
+            if (AchievementBundle.HasAsset)
+            {
+                if (AchievementBundle.Asset != null)
+                {
+                    try
+                    {
+                        // Unload the asset and then clean up
+                        FusionLogger.Log("Unloading AchievementBundle asset.");
+                        AchievementBundle.Asset.Unload(true);
+                        AchievementBundle.UnloadAsset();
+                        FusionLogger.Log("Successfully unloaded AchievementBundle asset.");
+                    }
+                    catch (Exception ex)
+                    {
+                        FusionLogger.LogException("unloading AchievementBundle asset", ex);
+                    }
+                }
+                else
+                {
+                    FusionLogger.Warn("AchievementBundle asset is null, even though HasAsset is true.");
+                }
+            }
+            else
+            {
+                FusionLogger.Warn("AchievementBundle has no asset to unload.");
             }
         }
 
