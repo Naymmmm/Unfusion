@@ -23,6 +23,9 @@ Fusion also has an SDK for integrating features into Marrow™ SDK items, maps, 
 - The source code of [Steamworks.NET](https://github.com/rlabrecque/Steamworks.NET) is used partially under the MIT License. The full license can be found [here](https://github.com/rlabrecque/Steamworks.NET/blob/master/LICENSE.txt).
 - The source code of [LiteNetLib](https://github.com/RevenantX/LiteNetLib) is included under the MIT License. The full license can be found [here](https://github.com/RevenantX/LiteNetLib/blob/master/LICENSE.txt).
 
+## How does this work?
+![](https://github.com/Naymmmm/Unfusion/blob/main/explanation.svg?raw=true)
+
 ## Disclaimer
 
 #### THIS PROJECT IS (a fork of fusion, that is) NOT AFFILIATED WITH ANY OTHER MULTIPLAYER MODS (fusion lol) OR STRESS LEVEL ZERO! This is its own standalone mod and shares code only with the original Fusion repository, any similarities are coincidental! This is a fork by the way; feel free to steal code since this is OPEN FUCKING SOURCE!
