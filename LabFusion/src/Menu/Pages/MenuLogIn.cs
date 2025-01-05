@@ -1,6 +1,8 @@
 ﻿using LabFusion.Marrow.Proxies;
 using LabFusion.Network;
+using LabFusion.Network.Proxy;
 using LabFusion.Preferences.Client;
+using LabFusion.Utilities;
 
 using UnityEngine;
 
@@ -47,13 +49,29 @@ public static class MenuLogIn
         };
 
         var logInElement = layoutOptions.Find("button_LogIn").GetComponent<FunctionElement>()
-            .WithTitle("Log In (illegally)")
+            .WithTitle("Log In (very legal)")
             .Do(() =>
             {
                 var layer = NetworkLayerManager.GetTargetLayer();
 
                 if (layer != null)
                 {
+                    if (layer == NetworkLayer.GetLayer<ProxySteamVRNetworkLayer>())
+                    {
+                        if (ProcessUtils.ProcessRunning("Fusion Helper") == false)
+                        {
+                            FusionLogger.Warn("FusionHelper is not running!");
+                            FusionNotifier.Send(new FusionNotification()
+                            {
+                                Title = "FusionHelper is not running!",
+                                Message = "FusionHelper is not running, therefore you will not be able to connect to the Proxy layer.",
+                                Type = NotificationType.WARNING,
+                                SaveToMenu = false,
+                                ShowPopup = true,
+                                PopupLength = 3f,
+                            });
+                        }
+                    }
                     NetworkLayerManager.LogIn(layer);
                 }
             });
